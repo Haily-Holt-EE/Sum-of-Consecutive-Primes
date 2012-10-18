@@ -24,7 +24,7 @@ int isSumofConsequtivePrimes( int n, int **consecutives, int *size )
 		free(*consecutives);
 		*consecutives = NULL;
 
-		for (backwardsI2 = backwardsI - 1; (primesSum < n) && (backwardsI2 > 0); backwardsI2--)//Sums the numbers in the array down from the index of the outer for-loop
+		for (backwardsI2 = backwardsI - 1; (primesSum < n) && (backwardsI2 >= 0); backwardsI2--)//Sums the numbers in the array down from the index of the outer for-loop
 		{
 			(*size)++;
 			*consecutives = (int *)realloc((int*)(*consecutives), (sizeof(int) * (*size)));
